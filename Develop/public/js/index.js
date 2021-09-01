@@ -107,12 +107,12 @@ function sendTransaction(isAdding) {
   // add to beginning of current array of data
   transactions.unshift(transaction);
 
-  // re-run logic to populate ui with new record
+ 
   populateChart();
   populateTable();
   populateTotal();
   
-  // also send to server
+  
   fetch("/api/transaction", {
     method: "POST",
     body: JSON.stringify(transaction),
@@ -138,7 +138,7 @@ function sendTransaction(isAdding) {
     // fetch failed, so save in indexed db
     saveRecord(transaction);
 
-    // clear form
+    
     nameEl.value = "";
     amountEl.value = "";
   });
