@@ -45,7 +45,7 @@ function populateChart() {
   let reversed = transactions.slice().reverse();
   let sum = 0;
 
-  // create date labels for chart
+  
   let labels = reversed.map(t => {
     let date = new Date(t.date);
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
